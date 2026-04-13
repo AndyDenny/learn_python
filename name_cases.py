@@ -1,3 +1,9 @@
-name = "Eric"
-total = "Hello " + name + ", would you like to learn some Python today?"
-print(total)
+name = "Andy Denny"
+name = name.lower()
+print(name)
+name = "andy denny"
+name = name.title()
+print(name)
+name = "andy denny"
+name = name.upper()
+print(name)
