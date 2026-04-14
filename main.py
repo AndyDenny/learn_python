@@ -1,5 +1,6 @@
-countries = ["Япония", "Германия", "Англия", "Китай", "Австралия", "Швейцария"]
-print(countries[1])
-
+pizzas = ["pepperoni", "calcione", "margarita", "neapolitan"]
+for pizza in pizzas:
+    print("I like " + pizza + " pizza")
+print("I really love pizza!")
 
 
