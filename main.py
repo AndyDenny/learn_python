@@ -1,6 +1,7 @@
 digits_list = range(1,1000001)
-for digit in digits_list:
-    print(digit)
+print(min(digits_list))
+print(max(digits_list))
+print(sum(digits_list))
 
 
 
