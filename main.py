@@ -1,6 +1,13 @@
-my_list = ["honda", "suzuki", "mitsubishi"]
-print("Я хотел бы купить мотоцикл " + my_list[0].title())
-print("Я хотел бы купить мотоцикл " + my_list[1].title())
-print("Я хотел бы купить мотоцикл " + my_list[2].title())
-print("Длина списка - " + str(len(my_list)) + " элемента")
+countries = ["Япония", "Германия", "Англия", "Китай", "Австралия", "Швейцария"]
+print(countries)
+print("Длина списка - " + str(len(countries)))
+countries.reverse()
+print("countries.reverse() - " + str(countries))
+countries.sort()
+print("countries.sort() - " + str(countries))
+sorted(countries)
+print("sorted(countries) - " + str(countries))
+countries.sort(reverse=True)
+print("countries.sort(reverse=True) - " + str(countries))
+
 
