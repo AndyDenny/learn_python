@@ -1,9 +1,2 @@
-name = "Andy Denny"
-name = name.lower()
-print(name)
-name = "andy denny"
-name = name.title()
-print(name)
-name = "andy denny"
-name = name.upper()
-print(name)
+message = 'Albert Einstein once said, "A person who never made a mistake never tried anything new."'
+print(message)
