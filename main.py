@@ -1,7 +1,4 @@
-digits_list = range(1,1000001)
-print(min(digits_list))
-print(max(digits_list))
-print(sum(digits_list))
-
+for ndx in range(1, 21, 2):
+    print(ndx)
 
 
