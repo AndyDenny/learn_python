@@ -1,4 +1,9 @@
-my_food = ['pizza', 'falafel', 'carrot cake', 'cannoli', 'ice cream']
-print("The first three items in the list are: " + str(my_food[:3]))
-print("Three items from the middle of the list are: " + str(my_food[1:4]))
-print("The last three items in the list are: " + str(my_food[-3:]))
+my_pizzas = ["pepperoni", "calcione", "margarita", "neapolitan"]
+friend_pizzas =  my_pizzas[:]
+my_pizzas.append("pineapple")
+friend_pizzas.append("romana")
+for pizza in my_pizzas:
+    print("My favorite pizzas are: " + pizza)
+
+for pizza in friend_pizzas:
+    print("My friend’s favorite pizzas are:" + pizza)
