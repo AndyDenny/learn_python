@@ -1,4 +1,3 @@
-cubes = range(1, 11)
+cubes = [value**3 for value in range(1, 11)]
 for digit in cubes:
-    print(digit**3)
-
+    print(digit)
