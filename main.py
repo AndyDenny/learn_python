@@ -1,5 +1,4 @@
-digits = range(3, 31, 3)
-for digit in digits:
-    print(digit)
-
+cubes = range(1, 11)
+for digit in cubes:
+    print(digit**3)
 
