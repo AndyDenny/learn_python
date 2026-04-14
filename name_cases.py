@@ -1,12 +1,12 @@
-user_name = "\t   Albert Einstein\n   "
-message = '-user_name-"' + user_name + '"--'
-print(message)
-user_name2 = user_name.rstrip()
-message = '-user_name.rstrip- "' + user_name2 + '"--'
-print(message)
-user_name3 = user_name.lstrip()
-message = '-user_name.lstrip- "' + user_name3 + '"--'
-print(message)
-user_name4 = user_name.strip()
-message = '-user_name.strip- "' + user_name4 + '"--'
-print(message)
+calc_plus = 5+3
+out_string = "5 + 3 = " + str(calc_plus)
+print(out_string)
+calc_minus = 10-2
+out_string = "10 - 2 = " + str(calc_minus)
+print(out_string)
+calc_multi = 4*2
+out_string = "4 * 2 = " + str(calc_multi)
+print(out_string)
+calc_divide = 16/2
+out_string = "16 / 2 = " + str(calc_divide)
+print(out_string)
