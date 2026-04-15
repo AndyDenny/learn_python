@@ -1,11 +1,9 @@
-users_name = []
+current_users = ["Andy", "Sandy", "admin" ,"Mandy", "Vendy"]
+new_users = ["Jack", "John", "Mandy", "Sara", "Vendy"]
 
-if users_name:
-    for name in users_name:
-        if name == 'admin':
-            print('Hello admin, would you like to see a status report?')
-        else:
-            print('Hello ' + name + ', thank you for logging in again')
-else:
-    print("We need to find some users!")
+for user in new_users:
+    if user in current_users:
+        print('User - ' + user + ' already exist')
+    else:
+        print('Username - ' + user + ' is free')
 
