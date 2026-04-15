@@ -1,9 +1,12 @@
-current_users = ["Andy", "Sandy", "admin" ,"Mandy", "Vendy"]
-new_users = ["Jack", "John", "Mandy", "Sara", "Vendy"]
+ten_digits = range(1,10)
 
-for user in new_users:
-    if user in current_users:
-        print('User - ' + user + ' already exist')
+for digit in ten_digits:
+    if digit == 1:
+        print(str(digit) + 'st')
+    elif digit == 2:
+        print(str(digit) + 'nd')
+    elif digit == 3:
+        print(str(digit) + 'rd')
     else:
-        print('Username - ' + user + ' is free')
+        print(str(digit) + 'th')
 
