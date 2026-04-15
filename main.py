@@ -1,8 +1,15 @@
-alien_color = 'green'
+age = 67
 
-if alien_color == 'green':
-    print('You just earned 5 points.')
-elif alien_color == 'yellow':
-    print('You just earned 10 points.')
-elif alien_color == 'red':
-    print('You just earned 15 points.')
+if age < 2:
+    print('младенец.')
+elif 2 <= age < 4:
+    print('малыш.')
+elif 4 <= age < 13:
+    print('ребенок.')
+elif 13 <= age < 20:
+    print('подросток.')
+elif 20 <= age < 65:
+    print('взрослый.')
+elif  age >= 65:
+    print('пожилой человек.')
+
