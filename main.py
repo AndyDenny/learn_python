@@ -1,15 +1,13 @@
-age = 67
+favorite_fruits = ["kivi", "banana", "peach"]
 
-if age < 2:
-    print('младенец.')
-elif 2 <= age < 4:
-    print('малыш.')
-elif 4 <= age < 13:
-    print('ребенок.')
-elif 13 <= age < 20:
-    print('подросток.')
-elif 20 <= age < 65:
-    print('взрослый.')
-elif  age >= 65:
-    print('пожилой человек.')
+if 'strawberry' in favorite_fruits:
+    print('You really like strawberry!')
+elif 'blueberry' in favorite_fruits:
+    print('You really like blueberry!')
+elif 'pineapple' in favorite_fruits:
+    print('You really like pineapple!')
+elif 'banana' in favorite_fruits:
+    print('You really like bananas!')
+elif 'watermelon' in favorite_fruits:
+    print('You really like watermelon!')
 
