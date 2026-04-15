@@ -1,13 +1,8 @@
-favorite_fruits = ["kivi", "banana", "peach"]
+users_name = ["Andy", "Sandy", "admin" ,"Mandy", "Vendy"]
 
-if 'strawberry' in favorite_fruits:
-    print('You really like strawberry!')
-elif 'blueberry' in favorite_fruits:
-    print('You really like blueberry!')
-elif 'pineapple' in favorite_fruits:
-    print('You really like pineapple!')
-elif 'banana' in favorite_fruits:
-    print('You really like bananas!')
-elif 'watermelon' in favorite_fruits:
-    print('You really like watermelon!')
+for name in users_name:
+    if name == 'admin':
+        print('Hello admin, would you like to see a status report?')
+    else:
+        print('Hello ' + name + ', thank you for logging in again')
 
