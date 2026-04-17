@@ -1,12 +1,13 @@
-ten_digits = range(1,10)
+famous_person = {
+    "first_name": "John",
+    "last_name": "Doe",
+    "age": "120",
+    "city": "New York"
+}
 
-for digit in ten_digits:
-    if digit == 1:
-        print(str(digit) + 'st')
-    elif digit == 2:
-        print(str(digit) + 'nd')
-    elif digit == 3:
-        print(str(digit) + 'rd')
-    else:
-        print(str(digit) + 'th')
-
+print("The famous person is: " +
+      famous_person['first_name'] + " " +
+      famous_person['last_name'] + ", " +
+      famous_person['age'] + " age, from " +
+      famous_person['city']
+)
