@@ -1,13 +1,12 @@
-famous_person = {
-    "first_name": "John",
-    "last_name": "Doe",
-    "age": "120",
-    "city": "New York"
+favorite_digits = {
+    "Andy": "57",
+    "Sandy": "45",
+    "Mandy": "120",
+    "Vendy": "12338"
 }
 
-print("The famous person is: " +
-      famous_person['first_name'] + " " +
-      famous_person['last_name'] + ", " +
-      famous_person['age'] + " age, from " +
-      famous_person['city']
-)
+print("Andy's favorite digit is: " + favorite_digits['Andy'] +
+    ",\nSandy's favorite digit is: " + favorite_digits['Sandy'] +
+    ",\nMandy's favorite digit is: " + favorite_digits['Mandy'] +
+    ",\nVendy's favorite digit is: " + favorite_digits['Vendy'] +
+    ".")
