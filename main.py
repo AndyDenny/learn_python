@@ -1,12 +1,15 @@
-ten_digits = range(1,10)
+favorite_languages = {
+'jen': ['python', 'ruby'],
+'sarah': ['c'],
+'edward': ['ruby', 'go'],
+'phil': ['python', 'haskell'],
+}
 
-for digit in ten_digits:
-    if digit == 1:
-        print(str(digit) + 'st')
-    elif digit == 2:
-        print(str(digit) + 'nd')
-    elif digit == 3:
-        print(str(digit) + 'rd')
-    else:
-        print(str(digit) + 'th')
 
+favorite_languages['sarah'].append('c++')
+favorite_languages['john'] = ['kotlin', 'java']
+
+for name, languages in favorite_languages.items():
+    print("\n" + name.title() + "'s favorite languages are:")
+    for language in languages:
+        print(language.title())
