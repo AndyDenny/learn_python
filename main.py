@@ -1,20 +1,20 @@
-people = {
-    "jd" : {
-    "first": "John",
-    "last": "Doe",
-    "location": "New York"
+pets = {
+    "holly" : {
+        "type": "dog",
+        "name": "holly",
+        "owner": "John Doe"
     },
-    'aeinstein': {
-    'first': 'albert',
-    'last': 'einstein',
-    'location': 'princeton',
+    "dolly" : {
+        "type": "sheep",
+        "name": "dolly",
+        "owner": "nasa"
     },
-    'mcurie': {
-    'first': 'marie',
-    'last': 'curie',
-    'location': 'paris',
+    "barbados" : {
+        "type": "hamster",
+        "name": "barbados",
+        "owner": "michael jackson"
     }
 }
 
-for person, info in people.items():
-    print(info['first'].title() + " " + info['last'].title() + " " + info['location'].title())
+for name, info in pets.items():
+    print(info['type'].title() + " - " + info['name'].title() + " by " + info['owner'].title())
