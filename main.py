@@ -1,14 +1,20 @@
-favorite_languages = {
-    'jen': 'python',
-    'sarah': 'c',
-    'edward': 'ruby',
-    'phil': 'python',
+people = {
+    "jd" : {
+    "first": "John",
+    "last": "Doe",
+    "location": "New York"
+    },
+    'aeinstein': {
+    'first': 'albert',
+    'last': 'einstein',
+    'location': 'princeton',
+    },
+    'mcurie': {
+    'first': 'marie',
+    'last': 'curie',
+    'location': 'paris',
+    }
 }
 
-user_names = [ "Andy", "Sandy", "sarah", "Mandy", "phil", "Vendy"]
-
-for name in user_names:
-    if name.lower() in favorite_languages:
-        print(name.title() + ", thank you for taking the poll")
-    else:
-        print(name.title() +  ", please take our poll!")
+for person, info in people.items():
+    print(info['first'].title() + " " + info['last'].title() + " " + info['location'].title())
