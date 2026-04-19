@@ -1,20 +1,10 @@
-pets = {
-    "holly" : {
-        "type": "dog",
-        "name": "holly",
-        "owner": "John Doe"
-    },
-    "dolly" : {
-        "type": "sheep",
-        "name": "dolly",
-        "owner": "nasa"
-    },
-    "barbados" : {
-        "type": "hamster",
-        "name": "barbados",
-        "owner": "michael jackson"
-    }
+favorite_digits = {
+    "Andy": ["57","59"],
+    "Sandy": ["45","47"],
+    "Mandy": ["120","123"],
+    "Vendy": ["12338","12345"]
 }
-
-for name, info in pets.items():
-    print(info['type'].title() + " - " + info['name'].title() + " by " + info['owner'].title())
+for name, digits in favorite_digits.items():
+    print(name + "'s favorite digits:")
+    for digit in digits:
+        print(digit)
