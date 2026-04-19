@@ -1,10 +1,20 @@
-favorite_digits = {
-    "Andy": ["57","59"],
-    "Sandy": ["45","47"],
-    "Mandy": ["120","123"],
-    "Vendy": ["12338","12345"]
+cities_info = {
+    "city" : {
+        "country": "countryName",
+        "population": "123123",
+        "fact" : "smallest population",
+    },
+    "city2": {
+        "country": "countryName2",
+        "population": "5675677653",
+        "fact": "very unique name"
+    },
+    "city3": {
+        "country": "countryName3",
+        "population": "89988678",
+        "fact": "biggest rivers"
+    },
+
 }
-for name, digits in favorite_digits.items():
-    print(name + "'s favorite digits:")
-    for digit in digits:
-        print(digit)
+for city, info in cities_info.items():
+    print(city + ": country - " + info["country"] + ", population - " + info["population"] + ", fact - " + info["fact"])
