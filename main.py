@@ -1,2 +1,5 @@
-input_str = input("What car can i offer to you? ")
-print("Let me see if I can find you a " + input_str)
+number_seats = int(input("На сколько мест хотите заказать столик? "))
+if number_seats > 8:
+    print("Придётся подождать... ")
+else:
+    print("Столик на " + str(number_seats) + " мест готов")
