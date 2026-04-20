@@ -1,5 +1,5 @@
-number_seats = int(input("На сколько мест хотите заказать столик? "))
-if number_seats > 8:
-    print("Придётся подождать... ")
+input_number = int(input("Введите число, чтобы узнать кратность 10. "))
+if input_number % 10 == 0:
+    print("Число " + str(input_number) + " - кратно 10.")
 else:
-    print("Столик на " + str(number_seats) + " мест готов")
+    print("Число " + str(input_number) + " - не кратно 10.")
