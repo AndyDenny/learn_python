@@ -1,10 +1,8 @@
-sandwich_orders = ['Club Sandwich', 'BLT', 'Reuben']
-finished_sandwiches = []
+finished_sandwiches = ['Club Sandwich', 'pastrami','BLT', 'pastrami', 'Reuben', 'pastrami']
 
-while sandwich_orders:
-    sandwich = sandwich_orders.pop()
-    print("I made your " + sandwich + " sandwich")
-    finished_sandwiches.append(sandwich)
+print('Pastrami is over')
+while 'pastrami' in finished_sandwiches:
+    finished_sandwiches.remove('pastrami')
 
-print("Finished sandwiches: ", finished_sandwiches)
+print("Sandwiches left: ", finished_sandwiches)
 
