@@ -1,10 +1,11 @@
 input_str = "\nВведите возраст чтобы узнать стоимость:"
 input_str += "\n(Введите 'quit’ для остановки работы программы.) "
+active = True
 
-while True:
+while active:
     age = input(input_str)
     if age == 'quit':
-        break
+        active = False
 
     if int(age) < 3:
         print("Билет бесплатный")
