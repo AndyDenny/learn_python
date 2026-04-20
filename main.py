@@ -1,15 +1,17 @@
-favorite_languages = {
-'jen': ['python', 'ruby'],
-'sarah': ['c'],
-'edward': ['ruby', 'go'],
-'phil': ['python', 'haskell'],
-}
+active = True
+answers = {}
 
+while active:
+    user_name = input("What is your name? ")
+    user_country = input("Which country would you like to travel someday? ")
+    proceed = input("Would you like to let another person respond? (y/n) ")
 
-favorite_languages['sarah'].append('c++')
-favorite_languages['john'] = ['kotlin', 'java']
+    answers[user_name.title()] = user_country.title()
 
-for name, languages in favorite_languages.items():
-    print("\n" + name.title() + "'s favorite languages are:")
-    for language in languages:
-        print(language.title())
+    if proceed == "n":
+        active = False
+
+print("__Pool is finished!__")
+for key, value in answers.items():
+    print(key + " want's travel to " + value)
+
