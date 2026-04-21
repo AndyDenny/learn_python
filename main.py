@@ -1,6 +1,9 @@
-def show_magicians(wizzard_list):
-    for wizzard in wizzard_list:
-        print("Hello " + wizzard.title() + "!")
+def make_great(wizzard_list):
+    for i in range(len(wizzard_list)):
+        wizzard_list[i] = "Great " + wizzard_list[i]
+    return wizzard_list
+
+
 
 wizzards = ["Sandy", "Mandy", "Vandy"]
-show_magicians(wizzards)
+print(make_great(wizzards)) 
