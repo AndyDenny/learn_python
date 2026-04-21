@@ -1,5 +1,7 @@
-def make_shirt(shirt_size='L', text_for_print='I love Python.'):
-    print("The shirt size '" + shirt_size.title() + "', and text on: " + text_for_print)
+def describe_city(city_name="Reykjavik", land_name="Iceland"):
+    print(city_name.title() + " is in " + land_name.title())
 
-make_shirt()
-make_shirt("xl","geek inside")
+describe_city()
+describe_city("moskow","russia")
+describe_city("paris","france")
+describe_city("new york","austria")
