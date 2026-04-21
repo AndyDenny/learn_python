@@ -1,4 +1,4 @@
-def display_message():
-    print("Hello!")
+def favorite_book(title):
+    print("One of my favorite books is " + title.title())
 
-display_message()
+favorite_book("lord of the rings")
