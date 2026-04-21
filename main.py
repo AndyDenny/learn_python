@@ -1,7 +1,7 @@
-def describe_city(city_name="Reykjavik", land_name="Iceland"):
-    print(city_name.title() + " is in " + land_name.title())
+def city_country(city_name, country_name):
+    return city_name.title() + ", " + country_name.title()
 
-describe_city()
-describe_city("moskow","russia")
-describe_city("paris","france")
-describe_city("new york","austria")
+
+print(city_country("moskow","russia"))
+print(city_country("paris","france"))
+print(city_country("berlin","germany"))
