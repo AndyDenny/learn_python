@@ -1,9 +1,5 @@
-def make_great(wizzard_list):
-    for i in range(len(wizzard_list)):
-        wizzard_list[i] = "Great " + wizzard_list[i]
-    return wizzard_list
+def make_sandvich(*args):
+    for arg in args:
+        print(arg)
 
-
-
-wizzards = ["Sandy", "Mandy", "Vandy"]
-print(make_great(wizzards)) 
+make_sandvich('mushrooms', 'green peppers', 'extra cheese')
