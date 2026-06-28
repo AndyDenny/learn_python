@@ -1,17 +1,17 @@
-active = True
-answers = {}
+import mymodule
+from mymodule import myfunc2
+from mymodule import myfunc3 as mf3
+import mymodule as mm
+from mymodule import *
 
-while active:
-    user_name = input("What is your name? ")
-    user_country = input("Which country would you like to travel someday? ")
-    proceed = input("Would you like to let another person respond? (y/n) ")
 
-    answers[user_name.title()] = user_country.title()
+print(mymodule.myfunc())
 
-    if proceed == "n":
-        active = False
+print(myfunc2())
 
-print("__Pool is finished!__")
-for key, value in answers.items():
-    print(key + " want's travel to " + value)
+print(mf3())
+
+print(mm.myfunc4())
+
+
 
