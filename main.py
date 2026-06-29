@@ -1,25 +1,31 @@
-class User:
-    def __init__(self, first_name, last_name, email, birthday):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.email = email
-        self.birthday = birthday
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+        self.number_served = 0
 
-    def describe_user(self):
-        print(f"{self.first_name} {self.last_name}, {self.birthday}, {self.email}")
+    def set_number_served(self, number_served):
+        self.number_served = number_served
 
-    def greet_user(self):
-        print(f"Welcome {self.first_name} {self.last_name}")
+    def increment_number_served(self, number_guests):
+        self.number_served += number_guests
 
 
-user1 = User("John", "Doe", "John@doe.com", "2010-10-10")
-user2 = User("Michael", "Jackson", "Michael@jackson.com", "2009-09-09")
-user3 = User("Sara", "Connor", "Sara@connor.com", "2008-08-08")
+    def describe_restaurant(self):
+        print(f"{self.restaurant_name} - {self.cuisine_type}")
 
-user1.describe_user()
-user1.greet_user()
-user2.describe_user()
-user2.greet_user()
-user3.describe_user()
-user3.greet_user()
+    def open_restaurant(self):
+        print(f"Restaurant {self.restaurant_name} is opened")
+
+
+
+restaurant = Restaurant("Myres", "russian")
+print(restaurant.number_served)
+restaurant.number_served = 7
+print(restaurant.number_served)
+restaurant.set_number_served(14)
+print(restaurant.number_served)
+restaurant.increment_number_served(5)
+print(restaurant.number_served)
+
 
