@@ -11,6 +11,9 @@ class Restaurant:
 
 
 
-restaurant = Restaurant("Myres", "russian")
-restaurant.describe_restaurant()
-restaurant.open_restaurant()
+restaurant1 = Restaurant("Myres", "russian")
+restaurant2 = Restaurant("Rrestourant", "english")
+restaurant3 = Restaurant("Mrestorante", "italian")
+restaurant1.describe_restaurant()
+restaurant2.describe_restaurant()
+restaurant3.describe_restaurant()
