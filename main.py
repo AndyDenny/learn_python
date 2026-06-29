@@ -1,17 +1,28 @@
-import mymodule
-from mymodule import myfunc2
-from mymodule import myfunc3 as mf3
-import mymodule as mm
-from mymodule import *
+class User:
+    def __init__(self, first_name, last_name, email, birthday):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.email = email
+        self.birthday = birthday
+        self.login_attempts = 0
+
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+    def describe_user(self):
+        print(f"{self.first_name} {self.last_name}, {self.birthday}, {self.email}")
+
+    def greet_user(self):
+        print(f"Welcome {self.first_name} {self.last_name}")
 
 
-print(mymodule.myfunc())
-
-print(myfunc2())
-
-print(mf3())
-
-print(mm.myfunc4())
-
-
-
+user = User("John", "Doe", "John@Doe.com", "2020-10-10")
+user.increment_login_attempts()
+user.increment_login_attempts()
+user.increment_login_attempts()
+print(user.login_attempts)
+user.reset_login_attempts()
+print(user.login_attempts)
