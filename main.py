@@ -1,31 +1,28 @@
-class Restaurant:
-    def __init__(self, restaurant_name, cuisine_type):
-        self.restaurant_name = restaurant_name
-        self.cuisine_type = cuisine_type
-        self.number_served = 0
+class User:
+    def __init__(self, first_name, last_name, email, birthday):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.email = email
+        self.birthday = birthday
+        self.login_attempts = 0
 
-    def set_number_served(self, number_served):
-        self.number_served = number_served
+    def increment_login_attempts(self):
+        self.login_attempts += 1
 
-    def increment_number_served(self, number_guests):
-        self.number_served += number_guests
+    def reset_login_attempts(self):
+        self.login_attempts = 0
 
+    def describe_user(self):
+        print(f"{self.first_name} {self.last_name}, {self.birthday}, {self.email}")
 
-    def describe_restaurant(self):
-        print(f"{self.restaurant_name} - {self.cuisine_type}")
-
-    def open_restaurant(self):
-        print(f"Restaurant {self.restaurant_name} is opened")
-
-
-
-restaurant = Restaurant("Myres", "russian")
-print(restaurant.number_served)
-restaurant.number_served = 7
-print(restaurant.number_served)
-restaurant.set_number_served(14)
-print(restaurant.number_served)
-restaurant.increment_number_served(5)
-print(restaurant.number_served)
+    def greet_user(self):
+        print(f"Welcome {self.first_name} {self.last_name}")
 
 
+user = User("John", "Doe", "John@Doe.com", "2020-10-10")
+user.increment_login_attempts()
+user.increment_login_attempts()
+user.increment_login_attempts()
+print(user.login_attempts)
+user.reset_login_attempts()
+print(user.login_attempts)
