@@ -1,17 +1,16 @@
-import mymodule
-from mymodule import myfunc2
-from mymodule import myfunc3 as mf3
-import mymodule as mm
-from mymodule import *
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
 
+    def describe_restaurant(self):
+        print(f"{self.restaurant_name} - {self.cuisine_type}")
 
-print(mymodule.myfunc())
-
-print(myfunc2())
-
-print(mf3())
-
-print(mm.myfunc4())
+    def open_restaurant(self):
+        print(f"Restaurant {self.restaurant_name} is opened")
 
 
 
+restaurant = Restaurant("Myres", "russian")
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
