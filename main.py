@@ -20,12 +20,20 @@ class User:
 
 
 class Admin(User):
+
+    def __init__(self):
+        self.privileges = Privileges().privileges
+
+    def show_privileges(self):
+        return self.privileges
+
+
+class Privileges:
     def __init__(self):
         self.privileges = ["разрешено добавлять сообщения", "разрешено удалять пользователей", "разрешено банить пользователей" ]
 
 
-    def show_privileges(self):
-        return self.privileges
+
 
 admin = Admin()
 print(admin.show_privileges())
