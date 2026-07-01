@@ -1,37 +1,60 @@
-class User:
-    def __init__(self, first_name, last_name, email, birthday):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.email = email
-        self.birthday = birthday
-        self.login_attempts = 0
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
 
-    def increment_login_attempts(self):
-        self.login_attempts += 1
+    def get_descriptive_name(self):
+        long_name = f"{self.year} {self.make} {self.model}"
+        return long_name.title()
 
-    def reset_login_attempts(self):
-        self.login_attempts = 0
+    def read_odometer(self):
+        print(f"This car has {self.odometer_reading} miles on it.")
 
-    def describe_user(self):
-        print(f"{self.first_name} {self.last_name}, {self.birthday}, {self.email}")
+    def update_odometer(self, mileage):
+        if mileage >= self.odometer_reading:
+            self.odometer_reading += mileage
+        else:
+            print("Sorry, that's not enough odometer!")
 
-    def greet_user(self):
-        print(f"Welcome {self.first_name} {self.last_name}")
-
-
-class Admin(User):
-
-    def __init__(self):
-        self.privileges = Privileges()
+    def increment_odometer(self, miles):
+        self.odometer_reading += miles
 
 
-class Privileges:
-    def __init__(self):
-        self.privileges = ["разрешено добавлять сообщения", "разрешено удалять пользователей", "разрешено банить пользователей" ]
+class ElectricCar(Car):
+    def __init__(self, make, model, year):
+        super().__init__(make,model,year)
+        self.battery = Battery()
 
-    def show_privileges(self):
-        return self.privileges
+    def fill_gas_tank(self):
+        print("This car hasn't a gas tank")
 
 
-admin = Admin()
-print(admin.privileges.show_privileges())
+class Battery():
+    def __init__(self, battery_size=70):
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print(f"This car has {self.battery_size}-kWh battery.")
+
+    def get_range(self):
+        if self.battery_size == 70:
+            range = 280
+        elif self.battery_size == 85:
+            range = 1600
+
+        print(f"This car has {range} miles left")
+
+    def upgrade_battery(self):
+        if self.battery_size != 85:
+            self.battery_size = 85
+
+
+mytesla = ElectricCar('Tesla', 'model s', 2020)
+print(mytesla.get_descriptive_name())
+mytesla.battery.describe_battery()
+mytesla.battery.get_range()
+mytesla.battery.upgrade_battery()
+mytesla.battery.get_range()
+
