@@ -1,13 +1,4 @@
-from Restaurant import Restaurant
+from Admin import Admin
 
-
-class IceCreamStand(Restaurant):
-    def __init__(self):
-        self.flavors = ["vanilla", "chocolate", "strawberry", "raspberry"]
-
-    def show_flavors(self):
-        return self.flavors
-
-
-restr = Restaurant("MyTreshka","russian")
-restr.open_restaurant()
+admin = Admin()
+print(admin.privileges.show_privileges())
