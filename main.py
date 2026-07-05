@@ -1,8 +1,8 @@
-name = ''
-while name != 'exit':
-    name = input("What is your name? (type 'exit' to quit): ")
-    if name != 'exit':
-        with open('guest_book.txt', 'a') as file_object:
-            file_object.write(f"{name.title()}\n")
-            print(f"Glad to see you {name.title()}!")
+cause = ''
+while cause != 'exit':
+    cause = input("Why you like programming? (type 'exit' to quit): ")
+    if cause != 'exit':
+        with open('causes.txt', 'a') as file_object:
+            file_object.write(f"I like programming, because {cause}\n")
+
 
