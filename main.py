@@ -1,28 +1,16 @@
-class User:
-    def __init__(self, first_name, last_name, email, birthday):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.email = email
-        self.birthday = birthday
-        self.login_attempts = 0
 
-    def increment_login_attempts(self):
-        self.login_attempts += 1
+try:
+    first_digit = int(input("Enter first number (type 'q' to quit): "))
+except ValueError:
+    print("Please enter a number.")
 
-    def reset_login_attempts(self):
-        self.login_attempts = 0
-
-    def describe_user(self):
-        print(f"{self.first_name} {self.last_name}, {self.birthday}, {self.email}")
-
-    def greet_user(self):
-        print(f"Welcome {self.first_name} {self.last_name}")
+try:
+    second_digit = int(input("Enter second number (type 'q' to quit): "))
+except ValueError:
+    print("Please enter a number.")
 
 
-user = User("John", "Doe", "John@Doe.com", "2020-10-10")
-user.increment_login_attempts()
-user.increment_login_attempts()
-user.increment_login_attempts()
-print(user.login_attempts)
-user.reset_login_attempts()
-print(user.login_attempts)
+total = first_digit + second_digit
+
+print(total)
+
