@@ -1,11 +1,25 @@
-from collections import OrderedDict
+from random import randint
 
-favorite_digits = OrderedDict()
+class Die:
+    def __init__(self, side = 6):
+        self.side = side
 
-favorite_digits["Andy"]= "57"
-favorite_digits["Vendy"]= "12338"
-favorite_digits["Sandy"]= "45"
-favorite_digits["Mandy"]= "120"
+    def roll_die(self):
+        return randint(1, self.side)
 
-for name, digit in favorite_digits.items():
-    print(f"{name}: {digit}")
+
+six_die = Die()
+ten_die = Die(10)
+twenty_die = Die(20)
+
+for i in range(10):
+    print(f"{six_die.roll_die()}")
+print("=6 sides end=")
+
+for i in range(10):
+    print(f"{ten_die.roll_die()}")
+print("=10 sides end=")
+
+for i in range(10):
+    print(f"{twenty_die.roll_die()}")
+print("=20 sides end=")
