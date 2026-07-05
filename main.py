@@ -1,8 +1,16 @@
-cause = ''
-while cause != 'exit':
-    cause = input("Why you like programming? (type 'exit' to quit): ")
-    if cause != 'exit':
-        with open('causes.txt', 'a') as file_object:
-            file_object.write(f"I like programming, because {cause}\n")
 
+try:
+    first_digit = int(input("Enter first number (type 'q' to quit): "))
+except ValueError:
+    print("Please enter a number.")
+
+try:
+    second_digit = int(input("Enter second number (type 'q' to quit): "))
+except ValueError:
+    print("Please enter a number.")
+
+
+total = first_digit + second_digit
+
+print(total)
 
