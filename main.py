@@ -1,5 +1,5 @@
-with open('learning_python.txt') as file_object:
-    contents = file_object.readlines()
-    for line in contents:
-        new_line = line.replace('Python', 'C')
-        print(new_line.strip())
+name = input("What is your name? ")
+
+with open('guest.txt', 'a') as file_object:
+    file_object.write(f"{name}\n")
+
