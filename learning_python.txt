@@ -1,0 +1,4 @@
+In Python you can calculate variables
+In Python you can define functions
+In Python you can create classes
+
