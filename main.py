@@ -1,16 +1,13 @@
+try:
+    with open('cats2.txt') as file:
+        filedata = file.read()
+        print(filedata)
+except FileNotFoundError:
+    pass
 
 try:
-    first_digit = int(input("Enter first number (type 'q' to quit): "))
-except ValueError:
-    print("Please enter a number.")
-
-try:
-    second_digit = int(input("Enter second number (type 'q' to quit): "))
-except ValueError:
-    print("Please enter a number.")
-
-
-total = first_digit + second_digit
-
-print(total)
-
+    with open('dogs.txt') as file:
+        filedata = file.read()
+        print(filedata)
+except FileNotFoundError:
+    pass
