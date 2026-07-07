@@ -1,14 +1,36 @@
 import json
-"""
-before using - delete 'dump.json'
-"""
-try:
-    with open('dump.json') as file:
-        number = json.load(file)
-except FileNotFoundError:
-    number = input("Enter your favorite number: ")
-    with open('dump.json', 'w') as file:
-        json.dump(number, file)
-else:
-    print(f"Your favorite number - {number}!")
 
+def get_stored_username():
+    """Получает хранимое имя пользователя, если оно существует."""
+    filename = 'username.json'
+    try:
+        with open(filename) as f_obj:
+            username = json.load(f_obj)
+    except FileNotFoundError:
+        return None
+    else:
+        return username
+
+def get_new_username():
+    """Запрашивает новое имя пользователя."""
+    username = input("What is your name? ")
+    filename = 'username.json'
+    with open(filename, 'w') as f_obj:
+        json.dump(username, f_obj)
+    return username
+
+def greet_user():
+    """Приветствует пользователя по имени."""
+    username = get_stored_username()
+    answer = input(f"Your name is {username}? (type 'yes' to continue): ")
+    if answer == 'yes':
+        print("Welcome back, " + username + "!")
+    else:
+        username = input("What is your name? ")
+        filename = 'username.json'
+        with open(filename, 'w') as f_obj:
+            json.dump(username, f_obj)
+
+    print("We'll remember you when you come back, " + username + "!")
+
+greet_user()
