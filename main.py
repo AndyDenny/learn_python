@@ -1,14 +1,15 @@
 import sys
 import pygame
+from settings import Settings
 
 def run_game():
     pygame.init()
-    screen = pygame.display.set_mode((800, 600))
+    game_settings = Settings()
+    screen = pygame.display.set_mode(game_settings.width, game_settings.height)
     pygame.display.set_caption('Invasion')
-    bg_color = (230, 230, 230)
 
     while True:
-        screen.fill(bg_color)
+        screen.fill(game_settings.bg_color)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
