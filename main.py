@@ -1,36 +1,18 @@
-import json
+import pygame
+from settings import Settings
+from ship import Ship
+import game_functions as gf
 
-def get_stored_username():
-    """Получает хранимое имя пользователя, если оно существует."""
-    filename = 'username.json'
-    try:
-        with open(filename) as f_obj:
-            username = json.load(f_obj)
-    except FileNotFoundError:
-        return None
-    else:
-        return username
+def run_game():
+    pygame.init()
+    game_settings = Settings()
+    screen = pygame.display.set_mode((game_settings.width, game_settings.height))
+    ship = Ship(screen)
+    pygame.display.set_caption('Invasion')
 
-def get_new_username():
-    """Запрашивает новое имя пользователя."""
-    username = input("What is your name? ")
-    filename = 'username.json'
-    with open(filename, 'w') as f_obj:
-        json.dump(username, f_obj)
-    return username
+    while True:
+        gf.check_events(ship)
+        ship.update()
+        gf.update_screen(game_settings, screen, ship)
 
-def greet_user():
-    """Приветствует пользователя по имени."""
-    username = get_stored_username()
-    answer = input(f"Your name is {username}? (type 'yes' to continue): ")
-    if answer == 'yes':
-        print("Welcome back, " + username + "!")
-    else:
-        username = input("What is your name? ")
-        filename = 'username.json'
-        with open(filename, 'w') as f_obj:
-            json.dump(username, f_obj)
-
-    print("We'll remember you when you come back, " + username + "!")
-
-greet_user()
+run_game()
