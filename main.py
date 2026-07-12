@@ -11,9 +11,7 @@ def run_game():
     pygame.display.set_caption('Invasion')
 
     while True:
-        screen.fill(game_settings.bg_color)
-        ship.blitme()
         gf.check_events()
-        pygame.display.flip()
+        gf.update_screen(game_settings, screen, ship)
 
 run_game()
