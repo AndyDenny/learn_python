@@ -4,5 +4,6 @@ class Settings:
         self.width = 800
         self.height = 600
         self.bg_color = (130, 230, 230)
+        self.ship_speed_factor = 1.5
 
 

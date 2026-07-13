@@ -7,7 +7,7 @@ def run_game():
     pygame.init()
     game_settings = Settings()
     screen = pygame.display.set_mode((game_settings.width, game_settings.height))
-    ship = Ship(screen)
+    ship = Ship(game_settings, screen)
     pygame.display.set_caption('Invasion')
 
     while True:
