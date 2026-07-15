@@ -12,6 +12,7 @@ def check_events(game_settings, screen, ship, bullets):
             sys.exit()
 
 
+
 def key_down(event, game_settings, screen, ship, bullets):
     if event.key == pygame.K_RIGHT:
         ship.flag_moving_right = True
@@ -19,6 +20,9 @@ def key_down(event, game_settings, screen, ship, bullets):
         ship.flag_moving_left = True
     if event.key == pygame.K_SPACE:
         fire_bullets(game_settings, screen, ship, bullets)
+    if event.key == pygame.K_q:
+        sys.exit()
+
 
 def key_up(event,ship):
     if event.key == pygame.K_RIGHT:
@@ -27,11 +31,12 @@ def key_up(event,ship):
         ship.flag_moving_left = False
 
 
-def update_screen(game_settings, screen, ship, bullets):
+def update_screen(game_settings, screen, ship, alien, bullets):
     screen.fill(game_settings.bg_color)
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     ship.blitme()
+    alien.blitme()
     pygame.display.flip()
 
 def update_bullets(bullets):
