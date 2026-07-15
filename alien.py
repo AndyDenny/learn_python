@@ -7,8 +7,8 @@ class Alien:
         self.game_settings = game_settings
         self.screen = screen
 
-        self.image = pygame.image.load('images/alien.png')
-        self.screen_rect = self.image.get_rect()
+        self.image = pygame.image.load('assets/alien.png')
+        self.rect = self.image.get_rect()
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
 

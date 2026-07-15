@@ -31,11 +31,12 @@ def key_up(event,ship):
         ship.flag_moving_left = False
 
 
-def update_screen(game_settings, screen, ship, bullets):
+def update_screen(game_settings, screen, ship, alien, bullets):
     screen.fill(game_settings.bg_color)
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     ship.blitme()
+    alien.blitme()
     pygame.display.flip()
 
 def update_bullets(bullets):
